@@ -1,6 +1,7 @@
 # funcoes
 #
 # Sem parametros, sem retorno mas com parametros e função que possui parametros e retorno.
+#
 def funcoes():
     print("escrevendo funcoes aninonimas")
 
