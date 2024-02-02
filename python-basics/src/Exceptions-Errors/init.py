@@ -1,8 +1,8 @@
 lista = []
 
 try:
-    lista.append(input("Digite um numero:"))
-    lista.append(input("Digite outro numero:"))
+    lista.append(float(input("Digite um numero:")))
+    lista.append(float(input("Digite outro numero:")))
     divisao = lista[0] / lista[1]
 except ValueError:
     print("Valor invalido")
