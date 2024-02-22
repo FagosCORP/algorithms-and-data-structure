@@ -15,13 +15,14 @@ class VetorOrdenado:
             print(self.valores[i])
 
     def inserir(self, valor):
+        # verifico se ja esta lotado
         if self.ultima_posicao == self.capacidade - 1:
             print("O vetor ja esta cheio")
             exit()
-        self.ultima_posicao += 1
 
         # aqui eu to pegando a posicao que vai ser inserido o novo elemento
-        # m  aqui e para ordenar
+        # verifico se esta antes ou depois
+        # aqui e para ordenar
         posicao = 0
         for i in range(self.ultima_posicao + 1):
             posicao = i
@@ -32,6 +33,7 @@ class VetorOrdenado:
             if i == self.ultima_posicao:
                 posicao = i + 1
 
+        ### Acabamos de achar logo em seguida
         # logo em seguida preciso realizar o seguinte agora eu vou ir da ultima_posicao ate a posicao que eu vou inserir para remanejar
         # eu aumentei o tamanho do array e passei o ultimo valor para ele na primeira interação
         # todos ficaram um para frente ate chegar naquele  valor
@@ -44,6 +46,7 @@ class VetorOrdenado:
             x -= 1
 
         self.valores[posicao] = valor
+        self.ultima_posicao += 1
 
     def pesquisar(self, valor):
         for i in range(self.ultima_posicao + 1):
