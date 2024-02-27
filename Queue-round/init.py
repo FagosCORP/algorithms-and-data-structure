@@ -26,7 +26,7 @@ class QueueRound:
         self.values[self.final] = value
         self.number_elements += 1
 
-    def remove(self, value):
+    def remove(self):
         if self.__is_stack_empty():
             exit("Stack is empty")
 
