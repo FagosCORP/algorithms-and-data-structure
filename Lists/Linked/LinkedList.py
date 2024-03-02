@@ -25,3 +25,13 @@ class LinkedList:
         temp = self.first
         self.first = self.first.getNext()
         return temp
+
+    def search(self, value):
+        current = self.first
+        while current.value != value:
+            if current.value == None:
+                exit("Value is not finded.")
+
+            current = current.getNext()
+
+        return current

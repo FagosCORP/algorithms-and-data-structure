@@ -9,7 +9,7 @@ class Node:
     def setNext(self, next):
         self.next = next
 
-    def getNext(self) -> None:
+    def getNext(self):
         return self.next
 
     def print_node(self):
