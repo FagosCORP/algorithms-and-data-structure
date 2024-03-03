@@ -7,11 +7,11 @@ class LinkedList:
         self.first = None
 
     def add(self, value):
-        novo = Node(value)
+        new_node = Node(value)
         # setando em o novo no (o no antigo)
-        novo.setNext(self.first)
+        new_node.setNext(self.first)
         # o novo primeiro vai virar o novo que contem o no antigo
-        self.first = novo
+        self.first = new_node
 
     def print_list(self):
         current = self.first
@@ -29,9 +29,26 @@ class LinkedList:
     def search(self, value):
         current = self.first
         while current.value != value:
-            if current.value == None:
-                exit("Value is not finded.")
-
+            if current.getNext() == None:
+                return None
             current = current.getNext()
 
         return current
+
+    def remove_position(self, value):
+        if not self.first:
+            return None
+
+        before = self.first
+        current = self.first
+
+        while current.value != value:
+            if current.getNext() == None:
+                return None
+            before = current
+            current = current.getNext()
+
+        if self.first == current:
+            self.first = self.first.getNext()
+        else:
+            before.setNext(current.getNext())
